@@ -22,6 +22,18 @@ Route::get('/', function(){
     return view('login');
 });
 
+Route::get('/historia', function () {
+    return view('historia');
+})->name('historia');
+Route::get('/galeria', function () {
+    return view('galeria');
+})->name('galeria');
+Route::get('/contato', function () {
+    return view('contato');
+})->name('contato');
+Route::post('/contato', [ContatoController::class, 'enviar'])->name('contato.enviar');
+
+
 
 
 
